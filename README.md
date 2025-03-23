@@ -1,2 +1,2 @@
-# COVID19-Heatmap
-Heatmap visualization for COVID-19 dataset.
+# COVID19 Project
+
