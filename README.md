@@ -6,9 +6,9 @@ The COVID-19 Clean Complete dataset, available on Kaggle with a usability rating
 comprehensive global perspective on the COVID-19 pandemic. It contains 49,068 records across 10 columns,
 offering critical insights into the progression and impact of the virus. 
 
-The columns include:
-  •  Province/State: Sub-regional location (e.g., states,
-provinces).
+The columns include:_
+
+  •  Province/State: Sub-regional location (e.g., states,provinces).
 
   • Country/Region: The country or region's name.
 
