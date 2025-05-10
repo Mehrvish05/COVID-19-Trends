@@ -1,34 +1,57 @@
-# COVID19 Project
+# 🦠 COVID-19 Case Forecasting Using Machine Learning and LSTM
 
-**Intro to the Dataset’s objective** – Team 1 |Mehrvish
+This project applies both traditional machine learning and deep learning techniques to forecast COVID-19 case surges globally. The primary objective is to support proactive public health planning by identifying early indicators of outbreak trends.
 
-The COVID-19 Clean Complete dataset, available on Kaggle with a usability rating of 10.00, provides a
-comprehensive global perspective on the COVID-19 pandemic. It contains 49,068 records across 10 columns,
-offering critical insights into the progression and impact of the virus. 
+## 👩‍💻 Developed by
+**Mehrvish Mirza** — Responsible for data preprocessing, exploratory data analysis (EDA), feature engineering, and model implementation.
 
-The columns include:_
+## 📊 Project Overview
+Leveraging the Kaggle COVID-19 Clean Complete dataset, this project builds a pipeline that transforms raw case data into predictive insights. It evaluates model performance using accuracy, recall, and F1 scores to determine their effectiveness in detecting case surges.
 
-  •  Province/State: Sub-regional location (e.g., states,provinces).
+## 📁 Dataset Details
+- **Source:** [Kaggle COVID-19 Clean Complete](https://www.kaggle.com/datasets/imdevskp/corona-virus-report)
+- **Size:** ~49,000 records across 187 countries
+- **Features:** Date, Region, Confirmed, Deaths, Recovered, Active, WHO Region
 
-  • Country/Region: The country or region's name.
+## 🧠 Techniques and Models
+- **Preprocessing:** Label encoding, Min-Max scaling, and SMOTE for class balancing
+- **EDA:** Statistical summaries, visualizations, and correlation analysis
+- **Feature Engineering:** Lag variables, rolling averages, weekly percent changes
+- **Models Implemented:**
+  - Logistic Regression (baseline)
+  - Random Forest
+  - LSTM (two versions)
+  - XGBoost
 
-  • Latitude (Lat): Geographic latitude.
+## 📈 Model Results Summary
 
-  • Longitude (Long): Geographic longitude.
+| Model                | Accuracy | F1 Score (Surge / No Surge) |
+|---------------------|----------|------------------------------|
+| Logistic Regression | 0.788    | 0.65 / 0.85                  |
+| Random Forest       | 1.000    | 1.00 / 1.00                  |
+| LSTM (v1)           | 0.588    | 0.00 / 0.74                  |
+| LSTM (v2)           | 0.901    | 0.87 / 0.92                  |
+| XGBoost             | 0.999    | 0.99 / 0.99                  |
 
-  • Date: The date of the recorded data point.
-  
-  • Confirmed: Cumulative number of confirmed cases.
+> The second LSTM and XGBoost models demonstrated strong predictive performance, highlighting their suitability for time-dependent data.
 
-  • Deaths: Total reported deaths attributed to COVID-19.
+## 🗂 Repository Structure
 
-  • Recovered: Number of individuals who recovered from COVID-19.
+```
+covid-case-forecasting/
+├── notebooks/
+│   └── covid_case_trends.ipynb     # ML and LSTM forecasting workflow
+├── requirements.txt                # Required Python libraries
+└── README.md                       # Project documentation
+```
 
-  • Active: Current active cases (confirmed cases minus deaths and recoveries).
+## 🔗 Notebook Access
+- [View in Google Colab](https://colab.research.google.com/drive/1j6goPviL65bVbJYrSNWuTSRgDwzLY5JC?usp=sharing)
 
-  • WHO Region: The World Health Organization region classification.
+## 🚀 Highlights
+- Applied end-to-end forecasting pipeline using real-world time series data
+- Compared traditional and deep learning approaches on public health use case
+- Developed surge prediction models to support early intervention strategies
 
-This data set is perfect for descriptive analysis and predictive modeling, allowing researchers to examine temporal
-and spatial patterns, predict increases in cases, and facilitate proactive decision-making. Having a usability score of
-10.00 signifies its preparedness and excellence for machine learning activities, making it a crucial tool for effectively
-comprehending and controlling pandemic dynamics.
+## 📄 License
+Distributed under the MIT License.
